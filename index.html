@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tyria SDK — Live Sandbox Verification</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #f5f6f8; color: #111827; font-family: Arial, sans-serif; }
+      main { width: min(1180px, calc(100% - 32px)); margin: 32px auto 64px; }
+      header { margin-bottom: 24px; }
+      h1 { margin: 0 0 8px; font-size: 30px; }
+      header p { margin: 0; color: #4b5563; }
+      .source { margin-top: 8px; font-family: monospace; font-size: 12px; color: #6b7280; }
+      .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: start; }
+      section { min-height: 520px; padding: 20px; border: 1px solid #d1d5db; border-radius: 12px; background: white; }
+      section h2 { margin: 0 0 16px; font-size: 20px; }
+      tyria-form, tyria-appointment-booking { display: block; }
+      @media (max-width: 850px) { .grid { grid-template-columns: 1fr; } }
+    </style>
+    <script type="module" src="https://www.sandbox.tyriacore.app/embeds/v1/tyria-embeds.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Tyria SDK — Live Sandbox Verification</h1>
+        <p>Real TyriaDev resources loaded directly from the deployed Sandbox SDK.</p>
+        <p class="source">SDK: https://www.sandbox.tyriacore.app/embeds/v1/tyria-embeds.js</p>
+      </header>
+      <div class="grid">
+        <section>
+          <h2>Native form</h2>
+          <tyria-form
+            workspace-id="ws_10703d40-2cf4-4790-a6a8-aedaba0e69e0"
+            form-id="frm_e368a198-b654-44b1-b750-468ffff58feb"
+            show-title
+            show-description
+          ></tyria-form>
+        </section>
+        <section>
+          <h2>Native appointment booking</h2>
+          <tyria-appointment-booking
+            workspace="tyriadev"
+            appointment-type-id="appt_d2dbd222-1919-468d-96f4-f53172dc9543"
+            locale="en-US"
+          ></tyria-appointment-booking>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
